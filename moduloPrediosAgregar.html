@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Módulo de Predios</title>
+	<link rel="stylesheet" type="text/css" href="css/structure.css">
+    <link rel="stylesheet" type="text/css" href="css/loging.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/datepicker.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+</head>
+<body>
+	<div class="app_header">
+        <div class="section_header">
+            <div class="section_logo">
+               <div class="template_logo"></div>
+            </div>
+            <div class="section_logo_probosque">
+               <div class="template_logo_probosque"></div>
+            </div>
+            <div class="section_title_system">Sistema de Información Forestal del Estado de México</div>
+            <div class="section_info_user">
+               <div class="option_logout" style="font-size: 96%;">Cerrar sesión</div>
+               <div class="divisor"></div>
+               <div class="user_connected" style="font-size: 96%;"></div>
+            </div>
+        </div>
+    </div>
+	
+	<form id="formularioPredios">
+		<div class="row">
+			<br>
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <label>Estado</label>
+                <input type="text" class="form-control" value="México" readonly>
+            </div> 
+
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <label>Región</label>
+                <select name="region" class="form-control">
+                	<option value="-1">Seleccione una opción...</option>
+                </select>
+                <!--value="${data.region}" -->
+            </div>  
+
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <label>Municipio</label>
+                <select name="municipio" class="form-control">
+                	<option value="-1">Seleccione una opción...</option>
+                </select>
+                <!--value="${data.modulopredio_municipio}"-->
+            </div>
+
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <label>Localidad</label>
+                <select name="localidad" class="form-control">
+                	<option value="-1">Seleccione una opción...</option>
+                </select>
+                <!--value="${data.modulopredio_localidad}"-->
+            </div>         
+        </div>
+
+        <div class="row">
+            <br>
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <label>Clave Única de Predio</label>
+                <input type="text" name="claveUnicaIdentificacion" class="form-control" readonly>
+                <!--value="${data.folio}" -->
+            </div>
+
+            <div class="col-md-3 col-sm-3 col-xs-12">
+            	<label>SEDEMEX</label>
+                <input type="text" name="sedemex" class="form-control">
+                <!--value="${data.cve_sedemex}" -->
+            </div>
+
+            <div class="col-md-3 col-sm-3 col-xs-12">
+            	<label>Nombre del Predio</label>
+                <input type="text" name="nombrePredio" class="form-control">
+                <!--value="${data.predio}"-->
+            </div>
+
+            <div class="col-md-3 col-sm-3 col-xs-12">
+            	<label>Tipo de tenencia de la tierra</label>
+                <select name="tipoTenenciaTierra" class="form-control">
+                	<option value="-1">Seleccione una opción...</option>
+                </select>
+                <!--value="${data.cve_tenencia}"-->
+            </div>    
+        </div>	            
+
+        <div class="row">
+            <br>
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <label>Descripción de cómo llegar al predio</label>
+                <input type="text" name="descripcionComoLlegarPredio" class="form-control">
+                <!--value="${data.descripcion_llegada_predio}"-->
+            </div>
+
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <label>Latitud(UTM)</label>
+                <input type="text" name="latitud" class="form-control">
+                <!--value="${data.latitud}"-->
+            </div>
+
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <label>Longitud(UTM)</label>
+                <input type="text" name="longitud" class="form-control">
+                <!--value="${data.longitud}"-->
+            </div>
+
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <label>Superficie total (has)</label>
+                <input type="text" name="superficieTotal" class="form-control" placeholder="999999999.99">
+                <!--value="${data.superficie_total}"-->
+            </div>
+		</div>
+
+        <div class="row">
+        	<br>
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <label>Superficie cartográfica (has)</label>
+                <input type="text" name="superficieCartografica" class="form-control" placeholder="999999999.99">
+                <!--value="${data.superficie_cartografica}"-->
+            </div>
+
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <label>Superficie arbolada (has)</label>
+                <input type="text" name="superficieArbolada" class="form-control" placeholder="999999999.99">
+                <!--value="${data.superficie_arbolada}"-->
+            </div>
+
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <label>Superficie otros usos (has)</label>
+                <input type="text" name="superficieOtrosUsos" class="form-control" placeholder="999999999.99">
+                <!--value="${data.superficie_otros}"-->
+            </div>
+
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <label>Cuenca especifica</label>
+                <select id="cuencaEsp" name="cuencaEspecifica" class="form-control js-example-basic-multiple" multiple="multiple">
+                	<option value="prueba 1">prueba 1</option>
+                	<option value="prueba 2">prueba 2</option>
+                	<option value="prueba 3">prueba 3</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <br>
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <label>Área natural protegida</label>
+                <select id="areaNaturalPro" name="areaNaturalProtegida" class="form-control js-example-basic-multiple" multiple="multiple">
+                	<option value="prueba 1">prueba 1</option>
+                	<option value="prueba 2">prueba 2</option>
+                	<option value="prueba 3">prueba 3</option>
+                </select>
+                <!--<div class="input-group">
+                	<input type="text" name="areaNaturalProtegida" class="form-control" readonly>
+                	value="${data.anp}"
+					<span class="input-group-btn">
+						<button type="submit" class="btn btn-success">Click</button>
+					</span>
+                </div> -->           
+            </div>
+
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <label>Estatus del predio</label>
+                <select name="estatusPredio" class="form-control">
+                	<option value="-1">Seleccione una opción...</option>
+                </select>
+                <!--value="${data.estatus}"-->
+            </div>
+
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <label>Observaciones del predio</label>
+                <input type="text" name="observacionesPredio" class="form-control">
+                <!--value="${data.observaciones}"-->
+            </div>
+
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <label>Propietario o representante</label>
+                <div class="input-group">
+                    <input type="text" name="propietarioRepresentante" class="form-control" readonly>
+                    <span class="input-group-btn">
+                        <button type="submit" data-info="${data.folio}" class="btn btn-success multiregistro" data-multi="propietario">Registros</button>
+                    </span>
+                </div>          
+            </div>
+        </div>
+
+        <div class="row">
+            <br>
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <label>Polígonos del predio</label>
+                <div class="input-group">
+                    <input type="text" name="poligonosPredio" class="form-control" readonly>
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-success multiregistro" data-info="${data.folio}" data-multi="poligono" >Registros</button>
+                    </span>
+                </div>   
+            </div>
+
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <label>Imagenes</label>
+                <div class="input-group">
+                    <input type="text" name="imagenes" class="form-control" readonly>
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-success multiregistro" data-info="${data.folio}" data-multi="imagen">Registros</button>
+                    </span>
+                </div>   
+            </div>
+
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <label>Registro Forestal Nacional</label>
+                <input type="text" name="registroForestalNacional" class="form-control">
+                <!--value="${data.registroforestal_nacional}"-->
+            </div>
+
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <label>Permiso Aprovechamiento Forestal</label>
+                <select name="permisoAprovechamientoForestal" class="form-control">
+                	<option value="-1">Seleccione una opción...</option>
+                </select>
+                <!--value="${data.permiso_aprovechamiento}"-->
+            </div>
+        </div>
+
+        <div class="row">
+        	<br>
+        	<div class="col-md-offset-5 col-sm-offset-5">
+        		<button type="submit" id="aceptar" class="btn btn-success">Aceptar</button>
+        	</div>
+        </div>
+	</form>	
+
+	<style type="text/css">
+      label > span
+      {
+        color: red;
+      }  
+    </style>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+	<script type="text/javascript" src="js/validate/validate.js"></script>
+	<script type="text/javascript" src="js/moduloPredioAgregar.js"></script>
+
+	<script type="text/javascript">
+		$(".js-example-basic-multiple").select2();
+	</script>
+</body>
+</html>

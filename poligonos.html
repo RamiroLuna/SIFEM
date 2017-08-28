@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Poligonos</title>
+	<link rel="stylesheet" type="text/css" href="css/structure.css">
+    <link rel="stylesheet" type="text/css" href="css/loging.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/datepicker.css">
+</head>
+<body style="overflow-x:hidden; overflow-y:scroll;">
+	<div class="app_header">
+        <div class="section_header">
+            <div class="section_logo">
+               <div class="template_logo"></div>
+            </div>
+
+            <div class="section_logo_probosque">
+               <div class="template_logo_probosque"></div>
+            </div>
+
+            <div class="section_title_system">
+            	Sistema de Información Forestal del Estado de México
+            </div>
+
+            <div class="section_info_user">
+               	<div class="option_logout" style="font-size: 96%;">
+               		Cerrar sesión
+               	</div>
+
+               	<div class="divisor"></div>
+
+               	<div class="user_connected" style="font-size: 96%;"></div>
+            </div>
+        </div>
+    </div>
+
+    <form id="poligonos">
+    	<div class="col-lg-12">
+	    	<div class="form-group">
+	            <div class="row">
+	                <div class="col-md-6 col-sm-6 col-xs-12">
+	                    <!--Parrafo-->
+	                    <input type="hidden" name="consecutivo" class="form-control" value="${this[posicion].consecutivo}">
+	                </div>
+
+	                <div class="col-md-6 col-sm-6 col-xs-12">
+	                    <!--Folio-->
+	                    <input type="hidden" name="folio" class="form-control" value="${this[posicion].folio}">
+	                </div>
+	            </div>
+	        </div> 
+
+	        <div class="form-group">
+	            <div class="row">
+	                <div class="col-md-6 col-sm-6 col-xs-12">
+	                    <label>Acción agraria</label>
+	                    <input type="text" name="accionAgraria" class="form-control" value="${this[posicion].accion_agraria}">
+	                </div>
+
+	                <div class="col-md-6 col-sm-6 col-xs-12">
+	                    <label>Fecha de publicación en el DOF</label>
+	                    <input type="text" name="fechaPublicacionDof" class="form-control" value="${this[posicion].fecha_publicacion_dof}">
+	                </div>
+	            </div>
+	        </div>  
+
+	        <div class="form-group">
+	            <div class="row">
+	                <div class="col-md-6 col-sm-6 col-xs-12">
+	                    <label>Fecha de resolución presidencial</label>
+	                    <input type="text" name="fechaResolucionPresidencial" class="form-control" value="${this[posicion].fecha_resolucion_presidencial}">
+	                </div>
+
+	                <div class="col-md-6 col-sm-6 col-xs-12">
+	                    <label>Fecha de asamblea de procede</label>
+	                    <input type="text" name="fechaAsambleaProcede" class="form-control" value="${this[posicion].fecha_asamblea_procede}">
+	                </div>
+	            </div>
+	        </div> 
+
+	        <div class="form-group">
+	            <div class="row">
+	                <div class="col-md-6 col-sm-6 col-xs-12">
+	                    <label>Documento que ampara la propiedad</label>
+	                    <input type="text" name="documentoAmparaPropiedad" class="form-control" value="${this[posicion].documento_ampara_propiedad}">
+	                </div>
+
+	                <div class="col-md-6 col-sm-6 col-xs-12">
+	                    <label>Número del documento que ampara la propiedad</label>
+	                    <input type="text" name="numeroDocumentoAmparaPropiedad" class="form-control" value="${this[posicion].numero_documento_ampara_propiedad}">
+	                </div>
+	            </div>
+	        </div>   
+
+	        <div class="form-group">
+	            <div class="row">
+	                <div class="col-md-6 col-sm-6 col-xs-12">
+	                    <label>Latitud (UTM)</label>
+	                    <input type="text" name="latitud" class="form-control" value="${this[posicion].latitud}">
+	                </div>
+
+	                <div class="col-md-6 col-sm-6 col-xs-12">
+	                    <label>Longitud (UTM)</label>
+	                    <input type="text" name="longitud" class="form-control" value="${this[posicion].longitud}">
+	                </div>
+	            </div>
+	        </div>   
+
+	        <div class="form-group">
+	            <div class="row">
+	                <div class="col-md-6 col-sm-6 col-xs-12">
+	                    <label>Superficie del polígono (Ha)</label>
+	                    <input type="text" name="superficiePoligono" class="form-control" value="${this[posicion].superficie_poligono}" placeholder="000000000.00">
+	                </div>
+
+	                <div class="col-md-6 col-sm-6 col-xs-12">
+	                    <label>Superficie cartográfica (Ha)</label>
+	                    <input type="text" name="superficieCartografica" class="form-control" value="${this[posicion].superficie_cartografica}" placeholder="000000000.00">
+	                </div>
+	            </div>
+	        </div>  
+
+	        <div class="form-group">
+	            <div class="row">
+	                <div class="col-md-6 col-sm-6 col-xs-12">
+	                    <label>Superficie arbolada (Ha)</label>
+	                    <input type="text" name="superficieArbolada" class="form-control" value="${this[posicion].superficie_arbolada}" placeholder="000000000.00">
+	                </div>
+
+	                <div class="col-md-6 col-sm-6 col-xs-12">
+	                    <label>Superficie otros usos (Ha)</label>
+	                    <input type="text" name="superficieOtrosUsos" class="form-control" value="${this[posicion].superficie_otros_usos}" placeholder="000000000.00">
+	                </div>
+	            </div>
+	        </div>  
+
+	        <div class="form-group">
+	            <div class="row">
+	                <div class="col-md-6 col-sm-6 col-xs-12">
+	                    <label>Tipo de clima</label>
+	                    <select name="tipoClima" class="form-control">
+	                    	<option value="-1">Seleccione una opción...</option>
+	                    	<option value="${this[posicion].tipo_clima}">Prueba</option>
+	                    </select>	                    
+	                </div>
+
+	                <div class="col-md-6 col-sm-6 col-xs-12">
+	                    <label>Tipo de vegetación</label>
+	                    <select name="tipoVegetacion" class="form-control">
+	                    	<option value="-1">Seleccione una opción...</option>
+	                    	<option value="${this[posicion].tipo_vegetacion}">Prueba</option>
+	                    </select>	                    
+	                </div>
+	            </div>
+	        </div>  
+
+	        <div class="form-group">
+	            <div class="row">
+	                <div class="col-md-6 col-sm-6 col-xs-12">
+	                    <label>Tipo de fisiografía</label>
+	                    <input type="text" name="tipoFisiografia" class="form-control" value="${this[posicion].tipo_fisiografia}">
+	                </div>
+
+	                <div class="col-md-6 col-sm-6 col-xs-12">
+	                    <label>Corrientes intermitentes</label>
+	                    <input type="text" name="corrientesIntermitentes" class="form-control" value="${this[posicion].corrientes_intermitentes}">
+	                </div>
+	            </div>
+	        </div>
+
+	        <div class="form-group">
+	            <div class="row">
+	                <div class="col-md-6 col-sm-6 col-xs-12">
+	                    <label>Corrientes permanentes</label>
+	                    <input type="text" name="corrientesPermanentes" class="form-control" value="${this[posicion].corrientes_permanentes}">
+	                </div>
+
+	                <div class="col-md-6 col-sm-6 col-xs-12">
+	                    <label>Manantiales y/u ojos de agua</label>
+	                    <input type="text" name="manantialesOjoAgua" class="form-control" value="${this[posicion].manantiales_ojos_agua}">
+	                </div>
+	            </div>
+	        </div>
+
+	        <div class="form-group">
+	            <div class="row">
+	                <div class="col-md-6 col-sm-6 col-xs-12">
+	                    <label>Manantiales y/u ojos de agua que abastecen</label>
+	                    <input type="text" name="manantialesOjoAguaAbastecen" class="form-control" value="${this[posicion].manantiales_ojos_agua_abastecen}">
+	                </div>
+
+	                <div class="col-md-6 col-sm-6 col-xs-12">
+	                    <label>Erosión</label>
+	                    <input type="text" name="erosion" class="form-control" value="${this[posicion].erosion}">
+	                </div>
+	            </div>
+	        </div>
+
+	        <div class="form-group">
+	            <div class="row">
+	                <div class="col-md-6 col-sm-6 col-xs-12">
+	                    <label>Especies arbóreas</label>
+	                    <select name="especiesArboreas" class="form-control">
+	                    	<option value="-1">Seleccione una opción...</option>
+	                    	<option value="${this[posicion].especies_arboreas}">Prueba</option>
+	                    </select>	                    
+	                </div>
+
+	                <div class="col-md-6 col-sm-6 col-xs-12">
+	                    <label>Distribución del estrato arbustivo</label>
+	                    <input type="text" name="distribucionEstratoArbustivo" class="form-control" value="${this[posicion].distribucion_estrato_arbustivo}">
+	                </div>
+	            </div>
+	        </div>
+
+	        <div class="form-group">
+	            <div class="row">
+	                <div class="col-md-6 col-sm-6 col-xs-12">
+	                    <label>Distribución de renuevo</label>
+	                    <input type="text" name="distribucionRenuevo" class="form-control" value="${this[posicion].distribucion_renuevo}">
+	                </div>
+
+	                <div class="col-md-6 col-sm-6 col-xs-12">
+	                    <label>Cobertura promedio del arbolado</label>
+	                    <input type="text" name="coberturaPromedioArbolado" class="form-control" value="${this[posicion].cobertura_promedio_arbolado}">
+	                </div>
+	            </div>
+	        </div>
+
+	        <div class="form-group">
+	            <div class="row">
+	                <div class="col-md-6 col-sm-6 col-xs-12">
+	                    <label>Fauna</label>
+	                    <input type="text" name="fauna" class="form-control" value="${this[posicion].fauna}">
+	                </div>
+
+	                <div class="col-md-6 col-sm-6">
+	                    <label>Observaciones del polígono</label>
+	                    <input type="text" name="observacionesPoligono" class="form-control" value="${this[posicion].observaciones_poligono}">
+	                </div>
+	            </div>
+	        </div>
+
+	        <div class="form-group">
+	            <div class="row">
+	                <div class="col-md-6 col-sm-6 col-xs-12">
+	                    <label>Figura</label>
+	                    <input type="text" name="figura" class="form-control" value="${this[posicion].figura_polygono}">
+	                </div>
+	            </div>
+	        </div>
+
+	        <div class="form-group">
+	        	<div class="row">
+	        		<div class="col-md-offset-5 col-sm-offset-5">
+	        			<button type="submit" id="aceptar" class="btn btn-success">Aceptar</button>
+	        		</div>
+	        	</div>
+	        </div>
+	    </div>
+    </form>
+
+    <style type="text/css">
+     	label > span
+      	{
+        	color: red;
+      	}  
+    </style>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="js/validate/validate.js"></script>
+	<script type="text/javascript" src="js/poligonos.js"></script>
+</body>
+</html>
