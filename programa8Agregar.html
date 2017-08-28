@@ -192,6 +192,16 @@
     			<label>Vehículos Revisados</label>
     			<input type="text" name="vehiculosRevisados" class="form-control" readonly>
     		</div>
+
+    		<div class="col-md-3 col-sm-3 col-xs-12">
+    			<label>Personas aseguradas o infraccionadas</label>
+    			<div class="input-group">
+    				<input type="text" name="personasAseguradasInfraccionadas" class="form-control" readonly>
+    				<span class="input-group-btn">
+    					<button type="button" data-info="${data.folio}" class="btn btn-success multiregistro" data-multi="personasAseguradas">Registros</button>
+    				</span>
+    			</div>
+    		</div>
     	</div>
     </form>
 
