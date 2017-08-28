@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Bienes y Productos Asegurados</title>
+	<link rel="stylesheet" type="text/css" href="css/structure.css">
+    <link rel="stylesheet" type="text/css" href="css/loging.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/datepicker.css">
+</head>
+<body style="overflow-x:hidden; overflow-y:scroll;">
+	<div class="app_header">
+        <div class="section_header">
+            <div class="section_logo">
+               <div class="template_logo"></div>
+            </div>
+
+            <div class="section_logo_probosque">
+               <div class="template_logo_probosque"></div>
+            </div>
+
+            <div class="section_title_system">
+            	Sistema de Información Forestal del Estado de México
+            </div>
+
+            <div class="section_info_user">
+               	<div class="option_logout" style="font-size: 96%;">
+               		Cerrar sesión
+               	</div>
+
+               	<div class="divisor"></div>
+
+               	<div class="user_connected" style="font-size: 96%;"></div>
+            </div>
+        </div>
+    </div>
+
+    <form id="bienesProductos">
+    	<div class="col-lg-12">
+    		<div class="form-group">
+    			<div class="row">
+    				<div class="col-md-6 col-sm-6 col-xs-12">
+    					<input type="hidden" name="consecutivo" class="form-control" value="${this[posicion].consecutivo}">
+    				</div>
+
+    				<div class="col-md-6 col-sm-6 col-xs-12">
+    					<input type="hidden" name="folio" class="form-control" value="${this[posicion].folio}">
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </form>
+
+    <style type="text/css">
+     	label > span
+      	{
+        	color: red;
+      	}  
+    </style>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="js/validate/validate.js"></script>
+	<script type="text/javascript" src="js/bienesProductos.js"></script>
+</body>
+</html>
