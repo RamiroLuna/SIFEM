@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/loging.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/datepicker.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
 </head>
 <body style="overflow-x:hidden; overflow-y:scroll;">
 	<div class="app_header">
@@ -71,9 +72,11 @@
     			<div class="row">
     				<div class="col-md-6 col-sm-6 col-xs-12">
     					<label>Tipo de Ilícito</label>
-    					<select name="tipoIlicito" class="form-control">
-    						<option value="-1">Seleccione una opción...</option>
-    					</select>
+                        <select name="tipoIlicito" class="form-control js-example-basic-multiple" multiple="multiple">
+                            <option value="prueba 1">prueba 1</option>
+                            <option value="prueba 2">prueba 2</option>
+                            <option value="prueba 3">prueba 3</option>
+                        </select>    					
     				</div>
 
     				<div class="col-md-6 col-sm-6 col-xs-12">
@@ -112,7 +115,7 @@
 
     				<div class="col-md-6 col-sm-6 col-xs-12">
     					<label>Descripción del Bien y Producto Asegurado</label>
-    					<input type="text" name="descripcionBienProducto" class="form-control">
+                        <textarea name="descripcionBienProducto" class="form-control" rows="3" cols="5"></textarea>			
     				</div>
     			</div>
     		</div>
@@ -151,7 +154,12 @@
     </style>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
 	<script type="text/javascript" src="js/validate/validate.js"></script>
 	<script type="text/javascript" src="js/bienesProductos.js"></script>
+
+    <script type="text/javascript">
+        $(".js-example-basic-multiple").select2();
+    </script>
 </body>
 </html>
