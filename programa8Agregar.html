@@ -161,7 +161,7 @@
     	<div class="row">
     		<br>    		
     		<div class="col-md-3 col-sm-3 col-xs-12">    			
-    			<label><br><br>Dependencias participantes</label>
+    			<label>Dependencias participantes</label>
     			<div class="input-group">
                     <input type="text" name="dependenciasParticipantes" class="form-control" readonly>
                     <span class="input-group-btn">
@@ -171,17 +171,22 @@
     		</div>			
 			
     		<div class="col-md-3 col-sm-3 col-xs-12">    			
-    			<label><br><br>Total de participantes</label>
+    			<label>Total de participantes</label>
     			<input type="text" name="totalParticipantes" class="form-control" readonly>
     		</div>
 	
     		<div class="col-md-3 col-sm-3 col-xs-12">
-    			<label>Vehículos Asegurados PROBOSQUE, PROFEPA, MP FUERO COMUN, MP FUERO FEDERAL</label>
-    			<input type="text" name="vehiculosAsegurados" class="form-control">
+    			<label>Vehículos Asegurados</label>
+                <div class="input-group">
+                    <input type="text" name="vehiculosAsegurados" class="form-control" readonly>
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-success multiregistro" data-info="${data.folio}" data-multi="vehiculosAsegurados">Registros</button>
+                    </span>
+                </div>
     		</div>
 
     		<div class="col-md-3 col-sm-3 col-xs-12">
-    			<label><br><br>Vehículos sin Irregularidades</label>
+    			<label>Vehículos sin Irregularidades</label>
     			<input type="text" name="vehiculosSinIrregularidades" class="form-control">
     		</div>
     	</div>
@@ -310,7 +315,7 @@
     		<br>
     		<div class="col-md-3 col-sm-3 col-xs-12">
     			<label>Observaciones</label>
-    			<input type="text" name="observaciones" class="form-control">
+                <textarea class="form-control" name="observaciones" rows="3" cols="5"></textarea>    			
     		</div>
 
     		<div class="col-md-3 col-sm-3 col-xs-12">
