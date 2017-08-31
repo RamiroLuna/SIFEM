@@ -2,13 +2,13 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>Inspector Forestal</title>
+	<title>Vehículos Asegurados</title>
 	<link rel="stylesheet" type="text/css" href="css/structure.css">
     <link rel="stylesheet" type="text/css" href="css/loging.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/datepicker.css">
 </head>
-<body style="overflow-x:hidden; overflow-y:scroll;">
+<body>
 	<div class="app_header">
         <div class="section_header">
             <div class="section_logo">
@@ -35,35 +35,11 @@
         </div>
     </div>
 
-    <form id="inspectorForestal">
+    <form id="vehiculosAsegurados">
     	<div class="col-lg-12">
     		<div class="form-group">
-    			<div class="row">
-    				<div class="col-md-6 col-sm-6 col-xs-12">
-    					<input type="hidden" name="consecutivo" class="form-control" value="${this[posicion].consecutivo}">
-    				</div>
-
-    				<div class="col-md-6 col-sm-6 col-xs-12">
-    					<input type="hidden" name="folio" class="form-control" value="${this[posicion].folio}">
-    				</div>
-    			</div>
-    		</div>
-
-    		<div class="form-group">
-    			<div class="row">
-    				<div class="col-md-6 col-sm-6 col-xs-12">
-    					<label>Inspector Forestal</label>
-    					<select name="inspectorForestal" class="form-control">
-    						<option value="-1">Seleccione una opción...</option>
-    					</select>
-    				</div>
-
-    				<div class="col-md-6 col-sm-6 col-xs-12">
-    					<label>Estatus del Inspector</label>
-    					<select name="estatusInspector" class="form-control">
-    						<option value="-1">Seleccione una opción...</option>
-    					</select>
-    				</div>
+    			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+    				
     			</div>
     		</div>
     	</div>
@@ -78,6 +54,6 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script type="text/javascript" src="js/validate/validate.js"></script>
-	<script type="text/javascript" src="js/inspectorForestal.js"></script>
+	<script type="text/javascript" src="js/vehiculosAsegurados.js"></script>
 </body>
 </html>
