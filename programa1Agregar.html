@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/loging.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/datepicker.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
     <link rel="shortcut icon" type="image/png" href="img/probosque 2.png"></link> 
 </head>
 <body style="overflow-x:hidden; overflow-y:scroll;">
@@ -284,6 +285,15 @@
     			<label>Superficie Arbolada</label>
     			<input type="text" name="superficie_arbolada" class="form-control" readonly>
     		</div>
+
+    		<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+    			<label>Nombre del ANP</label>
+    			<select name="nombre_apn" class="form-control js-example-basic-multiple" multiple="multiple">
+                	<option value="prueba 1">prueba 1</option>
+                	<option value="prueba 2">prueba 2</option>
+                	<option value="prueba 3">prueba 3</option>
+                </select>
+    		</div>
     	</div>
     </form>
 
@@ -298,5 +308,9 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
 	<script type="text/javascript" src="js/validate/validate.js"></script>
 	<script type="text/javascript" src="js/programa1Agregar.js"></script>
+
+	<script type="text/javascript">
+		$(".js-example-basic-multiple").select2();
+	</script>
 </body>
 </html>
